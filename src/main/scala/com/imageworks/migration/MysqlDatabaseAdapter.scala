@@ -171,7 +171,7 @@ class MysqlFloatColumnDefinition
 
 class MysqlDatabaseAdapter(override val schemaNameOpt: Option[String])
     extends DatabaseAdapter(schemaNameOpt) {
-  override val vendor = Mysql
+  override val vendor: Vendor = Mysql
 
   // https://dev.mysql.com/doc/refman/5.5/en/identifiers.html
   override val quoteCharacter = '`'
